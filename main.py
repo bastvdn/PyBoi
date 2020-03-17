@@ -2,19 +2,21 @@ import pygame
 import time
 from entity.player import Player
 from game.game import Game
-from projectiles.tear import Tear
 
-pygame.init()
-
-back_color = (80,90,120)
-red_color = (255,0,0)
-black_color = (165,42,42)
-window_resolution = (1280,720)
+game = Game()
+game.start_game()
+# pygame.init()
+#
+# back_color = (80,90,120)
+# red_color = (255,0,0)
+# black_color = (165,42,42)
+# window_resolution = (1280,720)
 
 #mise en place fenetre
-pygame.display.set_caption("PyBoi")
-window_surface = pygame.display.set_mode(window_resolution)
+# pygame.display.set_caption("PyBoi")
+# window_surface = pygame.display.set_mode(window_resolution)
 
+"""
 #mise en place des timers
 clock = pygame.time.Clock()
 pygame.time.set_timer(pygame.USEREVENT, 1)
@@ -107,4 +109,4 @@ while launched:
 
     clock.tick(60)
 
-
+"""

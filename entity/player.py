@@ -4,7 +4,7 @@ from projectiles.tear import Tear
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
-        self.health = 6
+        self.health = 1
         self.maxhealth = 6
         self.velocity = [0,0]
         self.maxvelocity = 10

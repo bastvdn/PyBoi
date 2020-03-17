@@ -29,20 +29,12 @@ class Ui():
             self.window.blit(image,(10+30*n,10))
 
 
-        for n in range(int(self.player.health/2)):
-            if self.player.health%2 and n == int(self.player.health/2):
+        for n in range(int(self.player.health/2)+1):
+            if self.player.health%2 == 1 and n == int(self.player.health/2):
                 image = pygame.image.load("C:/Users/user/Desktop/PyBoi/assets/ui/half_heart.png")
-                print("loadhalf")
-                
-                print(int(self.player.health/2))
             else:
-                print("loadfull")
                 image = pygame.image.load("C:/Users/user/Desktop/PyBoi/assets/ui/full_heart.png")
             image = pygame.transform.scale(image, (30, 30))
             self.window.blit(image, (10 + 30 * n, 10))
 
-        if self.player.health%2:
-            image = pygame.image.load("C:/Users/user/Desktop/PyBoi/assets/ui/full_heart.png")
-            image = pygame.transform.scale(image, (30, 30))
-            self.window.blit(image, (10 + 30 * n, 10))
 
