@@ -35,6 +35,7 @@ class Game():
 
     def showui(self):
         self.ui.show_health()
+        self.ui.show_bombs_key_coin()
 
     def start_game(self):
         launched = True
@@ -70,6 +71,8 @@ class Game():
                                      (self.player.hitbox.x + 50 + 20 * self.player.velocity[0],
                                       self.player.hitbox.y + 60 + 20 * self.player.velocity[1]), 5)
                     self.showui()
+
+
                     pygame.display.flip()
 
 
