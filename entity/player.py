@@ -4,19 +4,28 @@ from projectiles.tear import Tear
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
+
+        #player active stats
         self.health = 1
         self.maxhealth = 6
-        self.velocity = [0,0]
-        self.maxvelocity = 10
+        self.bombs = 12
+        self.coin = 27
+        self.key = 0
+
+        #player passive stats
         self.damages = 10
-        #self.hitbox = pygame.Rect(10,10,50,50).
+        self.range = 600
+        self.velocity = [0, 0]
+        self.maxvelocity = 10
+        self.temp = pygame.time.get_ticks()
+        self.tear_cd = 300
+
+        #hitbox
         self.image = pygame.image.load('assets/isaac.png')
         self.image = pygame.transform.scale(self.image,(100,120))
         self.hitbox = self.image.get_rect()
         self.all_projectiles = pygame.sprite.Group()
-        self.tear_cd = 300
-        self.temp = pygame.time.get_ticks()
-        self.range = 600
+
 
     def position(self):
         """
